@@ -1,5 +1,7 @@
-import CreditListItem from "./CreditListItem.js";
+import CreditListItem from "../components/CreditListItem.js";
 import CreditLockSlider from "./CreditLockSlider.js";
+import { TransUnionLogo } from "../components/static/Logo.js";
+
 const template = document.createElement("template");
 template.innerHTML = `
 	<link
@@ -15,7 +17,7 @@ template.innerHTML = `
 	<section class="credit-freeze-center">
 		<ul>
 			<div class="center-block active">
-				<credit-logo></credit-logo>
+				${TransUnionLogo} 
 				<credit-lock-slider locked="true"></credit-lock-slider>
 				<div>
 					<p class="history-title">Hide lock history</p>

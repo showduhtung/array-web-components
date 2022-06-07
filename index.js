@@ -1,7 +1,6 @@
-import CreditLockFooter from "./components/CreditLockFooter.js";
-import CreditLockHeader from "./components/CreditLockHeader.js";
-import CreditLockTable from "./components/CreditLockTable.js";
-import Logo from "./components/Logo.js";
+import CreditLockFooter from "./features/CreditLockFooter.js";
+import CreditLockTable from "./features/CreditLockTable.js";
+import { Header } from "./components/static/Header.js";
 
 const root = document.createElement("template");
 root.innerHTML = `
@@ -65,8 +64,8 @@ root.innerHTML = `
       rel="stylesheet"
       href="https://cdn-web-assets.array.io/webcom-creditlock-1b/header.f70a581c7b6fb8d004f565244140ed26.css"
     />
-    <credit-lock-header></credit-lock-header>
-    <credit-lock-table ></credit-lock-table>
+    ${Header} 
+    <credit-lock-table></credit-lock-table>
     <credit-lock-footer></credit-lock-footer>
   </div>
 `;
@@ -83,8 +82,6 @@ class ArrayCreditLock extends HTMLElement {
   }
 }
 
-customElements.define("credit-logo", Logo);
 customElements.define("credit-lock-table", CreditLockTable);
 customElements.define("array-credit-lock", ArrayCreditLock);
 customElements.define("credit-lock-footer", CreditLockFooter);
-customElements.define("credit-lock-header", CreditLockHeader);

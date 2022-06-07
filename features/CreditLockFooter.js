@@ -1,4 +1,4 @@
-import CollapsibleListItem from "./CollapsibleListItem.js";
+import CollapsibleListItem from "../components/CollapsibleListItem.js";
 
 export default class CreditLockFooter extends HTMLElement {
   constructor() {
