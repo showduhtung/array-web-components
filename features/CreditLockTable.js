@@ -67,7 +67,7 @@ export default class CreditLockTable extends HTMLElement {
       return (
         markup +
         `<credit-list-item date=${item.date} text=${
-          item.type === "enrollment" ? "Unlocked" : "Locked"
+          item.type === "enrollment" ? "Locked" : "Unlocked"
         }></credit-list-item>`
       );
     }, "");
